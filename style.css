@@ -1,0 +1,90 @@
+/* ---------- THEME VARIABLES ---------- */
+:root {
+  --bg-color:        #0e0e0e;
+  --text-color:      #ffffff;
+  --editor-bg:       #1e1e1e;
+  --border-color:    #333;
+  --highlight-color: #00f7ff;
+  --textarea-text:   #e3e3e3;
+}
+
+/* ---------- BASE LAYOUT ---------- */
+body {
+  margin: 0;
+  font-family: 'Fira Code', monospace;
+  background: var(--bg-color);
+  color: var(--text-color);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--editor-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--highlight-color);
+  text-shadow: 0 0 8px #00f7ff, 0 0 12px #00f7ff;
+}
+
+header button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+header button:hover {
+  background: var(--highlight-color);
+  color: #000;
+}
+
+/* ---------- EDITOR AREA ---------- */
+.editor-container {
+  flex: 1;
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+}
+
+textarea {
+  flex: 1;
+  padding: 1rem;
+  background: var(--editor-bg);
+  color: var(--textarea-text);
+  border: none;
+  border-right: 1px solid var(--border-color);
+  resize: none;
+  outline: none;
+  font-size: 14px;
+  caret-color: var(--highlight-color);
+}
+
+textarea:last-child { border-right: none; }
+
+/* custom scrollbar */
+textarea::-webkit-scrollbar { width: 6px; }
+textarea::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+/* ---------- PREVIEW ---------- */
+iframe {
+  width: 100%;
+  height: 40vh;
+  border: none;
+}
