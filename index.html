@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Title -->
+  <title>Online Code Editor</title>
+
+  <!-- Google Font for a pro coding look -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header / Toolbar -->
+  <header>
+    <h1>Online Code Editor</h1>
+    <button id="theme-toggle">🌙 Dark Mode</button>
+  </header>
+
+  <!-- Editors -->
+  <main class="editor-container">
+    <textarea id="html" placeholder="HTML"></textarea>
+    <textarea id="css"  placeholder="CSS"></textarea>
+    <textarea id="js"   placeholder="JavaScript"></textarea>
+  </main>
+
+  <!-- Live Preview -->
+  <iframe id="preview" title="Live Preview"></iframe>
+
+  <!-- Main script -->
+  <script src="script.js"></script>
+</body>
+</html>
